@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="search">
+        <img class="pokeball-image" src="../assets/pokeball-colored.png" />
         <input v-model="searchInput" v-on:keyup="$emit('filter', searchInput)" type="text" class="input" placeholder="Search for a Pokemon..."/>
     </div>
 </template>
@@ -16,12 +17,17 @@ export default {
 </script>
 
 <style scoped>
+.search {
+    margin-bottom: 50px;
+}
+.pokeball-image {
+    position: relative;
+    top: 22px;
+}
 .input {
     border-radius: 5px;
     padding: 10px;
-    width: 75%;
     border: 1px solid #f3f3f3;
     box-shadow: 1px 3px 5px #dadada;
-    margin: 35px;
 }
 </style>
